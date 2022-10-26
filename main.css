@@ -13,7 +13,7 @@
     --white-color: #fff;
     --font-color: #041B2D;
     --light-font-color:grey;
-    --shadow-color: #E7E7E7;
+    --shadow-color: #d4d4d4;
 }
 a{
     color: unset;
@@ -171,6 +171,9 @@ body{
     to{
         transform: rotate(360deg);
     }
+}
+#about{
+    background-color: var(--accent-color);
 }
 .about-content{
     display: grid;
@@ -442,12 +445,13 @@ body{
 }
 .featchers-content{
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
   justify-items: center;
   max-width: 1200px
 }
 .featchers-content>.section-name{
   padding: 30px;
+  grid-column: 1 / span 2;
 }
 .featchers-content>.featchers-disc{
   position: relative;
@@ -478,7 +482,11 @@ body{
   padding: 10px;
   color: var(--font-color);
   text-align: center;
-  font-size: 18px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: capitalize;
+  width: 100%;
+  height: 100%;
 }
 .featchers-content>.featchers-list{
   display: flex;
@@ -491,15 +499,16 @@ body{
   grid-template-columns: auto 1fr auto;
   column-gap: 5px;
   align-items: center;
-  padding: 20px;
+  padding: 10px 20px;
 }
 .featchers-content>.featchers-list>.featcher>i{
   color: var(--accent-color);
-  font-size: 22px;
+  font-size: 18px;
 }
 .featchers-content>.featchers-list>.featcher>.featcher-name{
   color: var(--font-color);
   text-transform: capitalize;
+    font-size: 16px;
 }
 .featchers-content>.featchers-list>.featcher>.check{
   color: var(--main-color);
@@ -543,6 +552,22 @@ body{
     }
     .nav-bar>.drop-down>.hire-me{
         width: 100%;
+    }
+    .featchers-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr 1fr;
+        justify-items: center;
+        max-width: 1200px
+    }
+    .featchers-content>.section-name {
+        padding: 30px;
+        grid-column: 1 / span 1;
+    }
+    .featchers-content>.featchers-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background-color: var(--white-color);
     }
 }
 /* ******************************small devices**************************************** */

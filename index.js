@@ -140,7 +140,31 @@ skillsArr.forEach(elm=>{
 
 //featchers list***********************************************************************
 const featchers=document.getElementById('featchers-list')
-function featcher(logo,name){
+function featcher(icon,name){
   const featcher=document.createElement('div')
-  featcher.className='featchers-list'
+  featcher.className='featcher'
+  const iconName=document.createElement("i")
+  iconName.className=icon
+  const featcherName=document.createElement("h3")
+  featcherName.className="featcher-name"
+  featcherName.innerText=name
+  const checkIcon=document.createElement("i")
+  checkIcon.classList="fa-solid fa-check-double check"
+  featcher.appendChild(iconName)
+  featcher.appendChild(featcherName)
+  featcher.appendChild(checkIcon)
+  return featcher
 }
+const featchersArr=[
+  {icon:"fa-regular fa-gem",name:"eficien website"},
+  {icon:"fa-solid fa-rocket",name:"fast performance"},
+  {icon:"fa-solid fa-desktop",name:"nice UI/UX"},
+  {icon:"fa-brands fa-searchengin",name:"SEO friendly"},
+  {icon:"fa-solid fa-user-secret",name:"security"},
+  {icon:"fa-solid fa-mobile-screen-button",name:"responcive web design"},
+  {icon:"fa-solid fa-universal-access",name:"accessibiliti"},
+  {icon:"fa-solid fa-dolly",name:"fast delivry"}
+]
+featchersArr.forEach(elm=>{
+  featchers.appendChild(featcher(elm.icon,elm.name))
+})
