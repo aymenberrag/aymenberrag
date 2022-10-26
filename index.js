@@ -16,8 +16,9 @@ const content=document.getElementById("content")
 content.onscroll=(e)=>{
     setActive(linksList[Math.floor((content.scrollTop+100)/content.offsetHeight)])
 }
-
-
+function hireMe(){
+  content.scrollTo({top :content.scrollHeight,behavior:"smooth"})
+}
 //nav bar drop down menu***********************************************************************
 const dropDownToggle=document.getElementById("drop-down-toggle")
 const navDropDown=document.getElementById("nav-drop-down")
