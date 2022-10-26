@@ -64,3 +64,83 @@ function showToggle(){
     }
 }
 
+
+
+//skill progress***********************************************************************
+
+const skills=document.getElementById('my-skills')
+function skill(icon,name,prog){
+  const skill=document.createElement('div')
+  skill.className='skill'
+  const skillIcon=document.createElement('i')
+  skillIcon.className=`fa-brands fa-${icon}`
+  const skillName=document.createElement('h3')
+  skillName.className='skill-name'
+  skillName.innerText=name
+  const progress=document.createElement('div')
+  progress.className='skill-progres center'
+  progress.setAttribute('progress',`${prog}%`)
+  if (prog<30) {
+    progress.classList.add('beginer')
+  }else if(prog<60){
+    progress.classList.add('meduim')
+  }else{
+    progress.classList.add('good')
+  }
+  progress.style.setProperty('--width',`${prog}%`)
+  skill.appendChild(skillIcon)
+  skill.appendChild(skillName)
+  skill.appendChild(progress)
+  return skill
+}
+const skillsArr=[
+  {
+    icon:'html5',
+    name:'html',
+    prog:50
+  },{
+  icon:'css3-alt',
+  name:'css',
+  prog:80
+},{
+  icon:'js',
+  name:'js',
+  prog: 80
+},{
+  icon:'react',
+  name:'react',
+  prog:70
+},{
+  icon:'bootstrap',
+  name:'bootstrap',
+  prog:50
+},{
+  icon:'node-js',
+  name:'nodejs',
+  prog:75
+},{
+  icon:'git-alt',
+  name:'git',
+  prog:90
+},{
+  icon:'mdb',
+  name:'mysql',
+  prog:75
+},{
+  icon:'mdb',
+  name:'mongodb',
+  prog:55
+}]
+
+skillsArr.forEach(elm=>{
+  skills.appendChild(skill(elm.icon,elm.name,elm.prog))
+})
+
+
+
+//featchers list***********************************************************************
+const featchers=document.getElementById('featchers-list')
+function featcher(logo,name){
+  const featcher=document.createElement('div')
+  featcher.className='featchers-list'
+}

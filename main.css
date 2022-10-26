@@ -13,7 +13,7 @@
     --white-color: #fff;
     --font-color: #041B2D;
     --light-font-color:grey;
-    --shadow-color:rgb(175, 175, 175);
+    --shadow-color: #E7E7E7;
 }
 a{
     color: unset;
@@ -140,7 +140,7 @@ body{
     height: 150%;
     background-image: conic-gradient(var(--accent-color),var(--main-color),var(--light-accent-color),var(--light-main-color),var(--accent-color));
     position: absolute;
-    animation: rotate 3s linear infinite paused;
+    animation: rotate 3s linear infinite;
 }
 .home-content>.welcome>.slogan{
     position: relative;
@@ -375,6 +375,134 @@ body{
     color: var(--light-font-color);
     text-transform: capitalize;
     text-align: center;
+}
+#skills{
+  background-color: var(--white-color)
+}
+.skills-content{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  width: 100%;
+  max-width: 1200px;
+  justify-items: center;
+  row-gap: 30px;
+}
+.skills-content>.section-name{
+  padding: 20px 0px;
+  grid-column: 1 / span 3
+}
+.skills-content>.skill{
+  padding: 10px;
+  color: var(--font-color);
+  display: grid;
+  grid-template: 1fr;
+  row-gap: 10px;
+  justify-items: center;
+  width: 120px;
+  background-color: var(--background-color);
+  box-shadow: 0px 0px 12px 2px var(--shadow-color)
+}
+.skills-content>.skill>i{
+  font-size: 30px;
+  color: var(--accent-color);
+}
+.skills-content>.skill>.skill-name{
+  text-transform: uppercase;
+}
+.skills-content>.skill>.skill-progres{
+  --width:50%;
+  width: 100%;
+  height: 14px;
+  position: relative;
+  background-color: var(--white-color);
+  border-radius: 7px;
+}
+.skills-content>.skill>.skill-progres::after{
+  content : "";
+  position: absolute;
+  left:0px;
+  height: 100%;
+  border-radius: 7px;
+  width: var(--width);
+}
+.skills-content>.skill>.beginer::after{
+  background-color: #DA343B;
+}
+.skills-content>.skill>.meduim::after{
+  background-color: #C7C110;
+}
+.skills-content>.skill>.good::after{
+  background-color: #24A513;
+}
+.skills-content>.skill>.skill-progres::before{
+  content: attr(progress);
+  color: var(--accent-color);
+  z-index: 2;
+  font-size: 12px;
+}
+.featchers-content{
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  max-width: 1200px
+}
+.featchers-content>.section-name{
+  padding: 30px;
+}
+.featchers-content>.featchers-disc{
+  position: relative;
+  padding: 20px;
+}
+.featchers-content>.featchers-disc::before{
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  background-color: var(--main-color);
+  top: 0px;
+  right: 0px;
+}
+.featchers-content>.featchers-disc::after{
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  background-color: var(--accent-color);
+  bottom: 0px;
+  left: 0px;
+}
+.featchers-content>.featchers-disc>.disc{
+  z-index: 2;
+  position: relative ;
+  background-color: var(--white-color);
+  padding: 10px;
+  color: var(--font-color);
+  text-align: center;
+  font-size: 18px;
+}
+.featchers-content>.featchers-list{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: var(--white-color);
+}
+.featchers-content>.featchers-list>.featcher{
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  column-gap: 5px;
+  align-items: center;
+  padding: 20px;
+}
+.featchers-content>.featchers-list>.featcher>i{
+  color: var(--accent-color);
+  font-size: 22px;
+}
+.featchers-content>.featchers-list>.featcher>.featcher-name{
+  color: var(--font-color);
+  text-transform: capitalize;
+}
+.featchers-content>.featchers-list>.featcher>.check{
+  color: var(--main-color);
 }
 /* ******************************small devices**************************************** */
 
