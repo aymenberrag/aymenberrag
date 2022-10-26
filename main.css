@@ -123,6 +123,12 @@ body{
     scroll-snap-align: start;
     scroll-snap-stop: always ;
 }
+#home{
+  background-image: url("imgs/bg-img.jpg");
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 .home-content{
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -173,7 +179,7 @@ body{
     }
 }
 #about{
-    background-color: var(--accent-color);
+    background-color: var(--font-color);
 }
 .about-content{
     display: grid;
